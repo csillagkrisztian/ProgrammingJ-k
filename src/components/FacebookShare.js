@@ -9,7 +9,7 @@ export default function SocialMediaButtons() {
   return (
     <FacebookShareButton
       url={"https://programmingjook.netlify.app/"}
-      quote={`${joke.setup}...${joke.punchline}`}
+      quote={`${joke.setup}...${joke.punchline}😂😂😂`}
       hashtag="#jöök"
       className="facebook-share-button"
     >
