@@ -1,3 +1,9 @@
 .homepage-title-row {
+  margin: 3rem;
   justify-content: center;
+}
+
+.homepage-kitty {
+  height: 450px;
+  width: auto;
 }

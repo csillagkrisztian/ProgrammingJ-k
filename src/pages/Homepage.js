@@ -1,9 +1,16 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
-import RandomJoke from "../components/RandomJoke";
+import { Container, Row, Col } from "react-bootstrap";
+import RandomJoke from "../components/RandomJoke/RandomJoke";
 import "./Homepage.css";
+import { useSelector } from "react-redux";
+import { selectPunchline } from "../store/joke/selectors";
+import loading from "../images/loading.gif";
+import loaded from "../images/loaded.gif";
+import Share from "../components/Share";
 
 export default function Homepage() {
+  const punchline = useSelector(selectPunchline);
+
   return (
     <Container fluid className="homepage-container">
       <Row className="homepage-title-row">
@@ -15,7 +22,13 @@ export default function Homepage() {
           <RandomJoke />
         </Col>
         <Col className="homepage-joke-gif">
-          <img></img>
+          <img
+            className="homepage-kitty"
+            src={punchline ? loaded : loading}
+          ></img>
+        </Col>
+        <Col className="homepage-share-col">
+          <Share />
         </Col>
       </Row>
     </Container>
