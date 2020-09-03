@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import loading from "../images/loading.gif";
+import loaded from "../images/loaded.gif";
 import axios from "axios";
 
 export default function RandomJoke() {
@@ -6,7 +8,7 @@ export default function RandomJoke() {
   const [joke, setJoke] = useState(initalState);
   const [punchline, setPunchline] = useState("");
 
-  console.log(punchline, joke.punchline);
+  console.log(loaded);
 
   useEffect(() => {
     async function getRandomJoke() {
@@ -37,6 +39,7 @@ export default function RandomJoke() {
     <div>
       <p>{joke.setup}</p>
       {!punchline ? <p>Wait for it...</p> : punchline}
+      <img src={punchline ? loaded : loading}></img>
     </div>
   );
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import RandomJoke from "../components/RandomJoke";
 import "./Homepage.css";
 
@@ -14,9 +14,7 @@ export default function Homepage() {
           <h2 className="homepage-joke-title">Here is a Jöök for you!</h2>
           <RandomJoke />
         </Col>
-        <Col className="homepage-joke-gif">
-          <img></img>
-        </Col>
+        <Col className="homepage-joke-gif"></Col>
       </Row>
     </Container>
   );

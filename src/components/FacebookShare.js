@@ -4,9 +4,9 @@ import { FacebookShareButton, FacebookIcon } from "react-share";
 export default function SocialMediaButtons(props) {
   return (
     <FacebookShareButton
-      url={"http://www.camperstribe.com"}
-      quote={"CampersTribe - World is yours to explore"}
-      hashtag="#camperstribe"
+      url={""}
+      quote={"Programming Jöökes to cheer You Öp!"}
+      hashtag="#jöök"
       className={classes.socialMediaButton}
     >
       <FacebookIcon size={36} />
