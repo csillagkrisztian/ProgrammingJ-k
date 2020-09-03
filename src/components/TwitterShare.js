@@ -7,8 +7,7 @@ export default function TwitterShare() {
   const joke = useSelector(selectJoke);
   return (
     <TwitterShareButton
-      url="https://programmingjook.netlify.app/"
-      quote={`${joke.setup}...${joke.punchline}`}
+      url={`${joke.setup}...${joke.punchline}😂😂😂`}
       hashtag="#programing joke"
     >
       <TwitterIcon size={36} />
